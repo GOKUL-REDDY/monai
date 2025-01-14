@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skin Cancer Detection</title>
+</head>
+<body>
+  <h1>Upload a Skin Lesion Image</h1>
+  
+  <form action="/predict" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" />
+    <button type="submit">Classify</button>
+  </form>
+
+  {% if error %}
+    <p style="color: red;">{{ error }}</p>
+  {% endif %}
+</body>
+</html>

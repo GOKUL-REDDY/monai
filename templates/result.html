@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Classification Result</title>
+</head>
+<body>
+  <h1>Classification Result</h1>
+
+  <p><strong>Prediction:</strong> {{ predicted_label }}</p>
+  <p>Probability Benign: {{ prob_benign }}</p>
+  <p>Probability Malignant: {{ prob_malignant }}</p>
+
+  <!-- Display the uploaded image -->
+  <img
+    src="{{ url_for('uploaded_file', filename=filename) }}"
+    alt="Uploaded Image"
+    width="300"
+    style="border: 1px solid #ccc;"
+  />
+
+  <br><br>
+  <a href="/">Classify Another Image</a>
+</body>
+</html>
